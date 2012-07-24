@@ -54,8 +54,6 @@ menu {
 }
 
 #posts{
-
-  border: 1px solid #DDD;
   
   .even{
     background-color: $even;
@@ -67,6 +65,7 @@ menu {
     min-height: 75px;
     clear: both;
     position: relative;
+    border: 1px solid #DDD;
     .user{
       float: left;
       font-size: .75em;
@@ -93,7 +92,7 @@ menu {
       padding: .1em 1em;
 
       time{
-        padding: 5px;
+        padding: 5px 5px 5px 0;
         color: $lighter-text;
         margin-bottom: 1em;
         font-size: .7em;
@@ -111,19 +110,8 @@ menu {
         right: 10px;
         bottom: 0;
         list-style-type: none;
-        li{
-          a{
-            text-align: center;
-            display: block;
-            text-decoration: none;
-            padding: .25em;
-            margin-bottom: .25em;
-            color: $default-text;
-            background-color: $mid-bg1;
-            &:hover{
-              background-color: $mid-bg1-highlight;
-            }
-          }
+        li {
+          a { margin-bottom: 1px; }
         }
       }
     }
@@ -204,4 +192,8 @@ table.subdued{
   height: 15px;
   background: transparent url(<%= asset_path('forem/pin_icon.png') %>) 0 0;
   display: inline-block;
+}
+
+.new_post {
+  textarea { margin-top: 10px; }
 }
